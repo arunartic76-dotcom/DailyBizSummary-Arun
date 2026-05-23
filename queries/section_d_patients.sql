@@ -3,13 +3,9 @@ GO
 
 DECLARE @ReportDate DATE = CAST(GETDATE()-1 AS DATE);
 
--- 11. New patients
-
 SELECT COUNT(*) AS NewPatients
 FROM lab.Patient
 WHERE RegisteredDate = @ReportDate;
-
--- 12. Repeat patients
 
 SELECT COUNT(DISTINCT b1.PatientID) AS RepeatPatients
 FROM lab.Booking b1
