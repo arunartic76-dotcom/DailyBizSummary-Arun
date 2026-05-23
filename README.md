@@ -64,6 +64,7 @@ Task Scheduler is used for automatic daily execution.
 - report_preview.png
 - sample_email.png
 - flow_run.png
+- dashboard.png
 
 ---
 
