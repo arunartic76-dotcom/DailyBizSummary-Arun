@@ -3,8 +3,6 @@ GO
 
 DECLARE @ReportDate DATE = CAST(GETDATE()-1 AS DATE);
 
--- 6. Department-wise revenue
-
 SELECT
     t.Department,
     COUNT(DISTINCT b.BookingID) AS BookingCount,
@@ -16,8 +14,6 @@ JOIN lab.Test t
     ON bt.TestID = t.TestID
 WHERE CAST(b.BookingDate AS DATE) = @ReportDate
 GROUP BY t.Department;
-
--- 7. Department with highest pending reports
 
 SELECT TOP 1
     t.Department,
